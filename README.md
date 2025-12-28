@@ -56,7 +56,57 @@
 ### Step 11:
   Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+    float math, science, english;
+    float average;
+    const float EPS = 0.0001;   // For safe floating-point comparison
+
+    printf("Enter marks for Math: ");
+    scanf("%f", &math);
+
+    printf("Enter marks for Science: ");
+    scanf("%f", &science);
+
+    printf("Enter marks for English: ");
+    scanf("%f", &english);
+
+  
+    average = (math + science + english) / 3.0;
+
+    
+    printf("\nAverage Marks = %.2f\n", average);
+
+
+    if (average + EPS >= 90.0) {
+        printf("Grade: A\n");
+    } else {
+        if (average + EPS >= 75.0) {
+            printf("Grade: B\n");
+        } else {
+            if (average + EPS >= 60.0) {
+                printf("Grade: C\n");
+            } else {
+                if (average + EPS >= 40.0) {
+                    printf("Grade: D\n");
+                } else {
+                    printf("Grade: Fail\n");
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+
 # Output:
+Enter marks for Math: 85
+Enter marks for Science: 78
+Enter marks for English: 82
+Average Marks = 81.67
+Grade: B
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +138,35 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+#include <stdio.h>
+
+int main() {
+    int number = 15;
+    int i;
+
+    printf("Multiplication Table of %d\n\n", number);
+
+    for (i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0;
+}
+
 # Output:
+Multiplication Table of 15
+
+15 x 1 = 15
+15 x 2 = 30
+15 x 3 = 45
+15 x 4 = 60
+15 x 5 = 75
+15 x 6 = 90
+15 x 7 = 105
+15 x 8 = 120
+15 x 9 = 135
+15 x 10 = 150
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +209,38 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+    int num, i, isPrime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+  
+    if (num <= 1) {
+        isPrime = 0;
+    } else {
+        for (i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime)
+        printf("%d is a Prime number.\n", num);
+    else
+        printf("%d is NOT a Prime number.\n", num);
+
+    return 0;
+}
+
 # Output:
+Enter a number: 29
+29 is a Prime number.
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +288,42 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+  
+    for (i = 1; i <= 5; i++) {
+        printf("%d", i);
+    }
+    printf("\n");
+    
+    for (i = 2; i <= 4; i++) {
+        printf("%d", i);
+
+        for (j = 1; j <= 3; j++) {
+            printf(" ");
+        }
+
+        printf("%d\n", 6 - i);
+    }
+
+ 
+    for (i = 5; i >= 1; i--) {
+        printf("%d", i);
+    }
+
+    return 0;
+}
+
 # Output:
+12345
+2   4
+3   3
+4   2
+54321
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +376,46 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+
+# program:
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    printf("0\n");
+
+    
+    for (i = 7; i >= 1; i--) {
+
+       
+        for (j = i; j <= 7; j++) {
+            printf("%d ", j);
+        }
+
+    
+        printf("0 ");
+
+        
+        for (j = 7; j >= i; j--) {
+            printf("%d ", j);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+# ouput:
+0
+7 0 7 
+6 7 0 7 6 
+5 6 7 0 7 6 5 
+4 5 6 7 0 7 6 5 4 
+3 4 5 6 7 0 7 6 5 4 3 
+2 3 4 5 6 7 0 7 6 5 4 3 2 
+1 2 3 4 5 6 7 0 7 6 5 4 3 2 1 
+
+ 
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
-
